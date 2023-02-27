@@ -1,0 +1,38 @@
+.header {
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../assets/hero-small.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 8rem;
+  }
+
+  &__logo {
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-white;
+  }
+}

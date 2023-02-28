@@ -29,3 +29,42 @@ body {
   }
 }
 ////////////////////////////////////////////////
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 700;
+  word-spacing: 2px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.2s;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    box-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  line-height: 1.6;
+  
+  &:not(:last-child){
+    margin-bottom: 3.5rem;
+  }
+}

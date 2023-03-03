@@ -50,7 +50,8 @@ body {
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
-    box-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+    text-shadow: 0.5rem 1rem 1rem rgba($color-black, 0.2);
+    background-color: $color-grey-light-1;
   }
 }
 
@@ -63,8 +64,8 @@ body {
 .paragraph {
   font-size: $default-font-size;
   line-height: 1.6;
-  
-  &:not(:last-child){
+
+  &:not(:last-child) {
     margin-bottom: 3.5rem;
   }
 }

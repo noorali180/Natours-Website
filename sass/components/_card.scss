@@ -156,6 +156,28 @@
       }
     }
   }
+
+  &__cta{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &-only{
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: $color-white;
+      margin-bottom: 1.2rem;
+    }
+
+    &-price{
+      font-size: 6rem;
+      font-weight: 100;
+      margin-bottom: 10rem;
+      color: $color-white;
+    }
+  }
 }
 
 .title-span {

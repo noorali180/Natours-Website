@@ -388,6 +388,67 @@ body {
     transform: translateY(-1.5rem) scale(1.03);
     box-shadow: 0 1.5rem 4.5rem rgba(0, 0, 0, 0.2); }
 
+.story {
+  width: 75%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  padding: 6rem;
+  padding-left: 8rem;
+  transform: skewX(-12deg); }
+  .story__profile {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: cirle(50% at 50% 50%);
+    transform: translateX(-2rem) skewX(12deg); }
+    .story__profile-image {
+      height: 100%;
+      transform: scale(1.2) translateX(-3rem);
+      transition: all 0.5s; }
+    .story__profile-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.7rem;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: 0;
+      backface-visibility: hidden;
+      transition: all 0.5s; }
+      .story__profile-caption--1 {
+        display: inline-block;
+        transform: translateY(-90%);
+        transition: inherit; }
+      .story__profile-caption--2 {
+        display: inline-block;
+        transform: translateY(90%);
+        transition: inherit; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__description {
+    font-size: 1.6rem;
+    line-height: 1.6; }
+  .story:hover .story__profile-caption {
+    opacity: 1; }
+  .story:hover .story__profile-caption--1 {
+    transform: translateY(0); }
+  .story:hover .story__profile-caption--2 {
+    transform: translateY(0); }
+  .story:hover .story__profile-image {
+    filter: blur(4px) brightness(80%);
+    transform: scale(1) translateX(-3rem); }
+
 .row {
   max-width: 114.4rem;
   margin: 0 auto; }
@@ -457,6 +518,10 @@ body {
     transform: skewY(7deg); }
 
 .section-tours {
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem;
+  background-color: #f7f7f7; }
+
+.section-story {
+  padding: 15rem 0;
   background-color: #f7f7f7; }

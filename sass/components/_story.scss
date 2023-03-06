@@ -1,0 +1,88 @@
+.story {
+  width: 75%;
+  background-color: $color-white;
+  border-radius: 3px;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.15);
+  margin: 0 auto;
+  padding: 6rem;
+  padding-left: 8rem;
+  transform: skewX(-12deg);
+
+  &__profile {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    overflow: hidden;
+    position: relative;
+
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: cirle(50% at 50% 50%);
+
+    transform: translateX(-2rem) skewX(12deg);
+
+    &-image {
+      height: 100%;
+      transform: scale(1.2) translateX(-3rem);
+      transition: all 0.5s;
+    }
+
+    &-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.7rem;
+      color: $color-white;
+      font-weight: 400;
+      line-height: 1.6;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: 0;
+      backface-visibility: hidden;
+      transition: all 0.5s;
+
+      &--1 {
+        display: inline-block;
+        transform: translateY(-90%);
+        transition: inherit;
+      }
+
+      &--2{
+        display: inline-block;
+        transform: translateY(90%);
+        transition: inherit;
+      }
+    }
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+
+  &__description {
+    font-size: $default-font-size;
+    line-height: 1.6;
+  }
+
+  &:hover &__profile-caption {
+    opacity: 1;
+  }
+
+  &:hover{
+    .story__profile-caption--1{
+      transform: translateY(0);
+    }
+
+    .story__profile-caption--2{
+      transform: translateY(0);
+    }
+  }
+
+  &:hover &__profile-image {
+    filter: blur(4px) brightness(80%);
+    transform: scale(1) translateX(-3rem);
+  }
+}

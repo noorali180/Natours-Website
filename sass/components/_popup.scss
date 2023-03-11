@@ -1,0 +1,85 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color-black, 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4000;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s;
+
+  &:target{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:target &__content{
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__content {
+    @include absoluteCenter;
+
+    width: 75%;
+    background-color: $color-white;
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+
+    transform: translate(-50%, -50%) scale(0.2);
+
+    transition: all .3s ease-in;
+    transition-delay: .4s;
+  }
+
+  &__left {
+    width: 33.3333%;
+    display: table-cell;
+  }
+
+  &__right {
+    width: 66.66667%;
+    padding: 0 5rem;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 4.5rem;
+
+    -moz-column-count: 2;
+    -moz-column-gap: 5rem;
+    -moz-column-rule: 1px solid $color-grey-light-2;
+
+    -webkit-column-count: 2;
+    -webkit-column-gap: 5rem;
+    -webkit-column-rule: 1px solid $color-grey-light-2;
+
+    column-count: 2;
+    column-gap: 5rem;
+    column-rule: 1px solid $color-grey-light-2;
+
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  &__close {
+    font-size: 3rem;
+    text-decoration: none;
+    color: inherit;
+    position: absolute;
+    top: 1.5rem;
+    right: 3rem;
+  }
+}

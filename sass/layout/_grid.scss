@@ -4,8 +4,13 @@
 
   @include clearfix;
 
+  @include respond(tab-port){
+    max-width: $grid-width-responsive;
+  }
+
   &:not(:last-child) {
     margin-bottom: $grid-gutter-vertical;
+    
   }
 
   [class^="col-"] {
@@ -14,6 +19,15 @@
 
     &:not(:last-child) {
       margin-right: $grid-gutter-horizontal;
+
+      @include respond(tab-port){
+        margin-right: 0;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
+      margin-bottom: $grid-gutter-vertical-small;
     }
   }
 

@@ -100,15 +100,15 @@ html {
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 30%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
 body {
   padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: "Lato", "sans-serif";
@@ -126,6 +126,10 @@ body {
     letter-spacing: 2.4rem;
     margin-bottom: 1rem;
     animation: moveInRight 1s ease-in-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     font-size: 1.5rem;
     font-weight: 700;
@@ -133,6 +137,10 @@ body {
     word-spacing: 2rem;
     margin-left: 0.5rem;
     animation: moveInLeft 1s ease-in-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.4rem;
+        word-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.6rem;
@@ -146,6 +154,12 @@ body {
   background-clip: text;
   transition: all 0.2s;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
@@ -684,6 +698,9 @@ body {
     content: "";
     clear: both;
     display: table; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 45rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row [class^="col-"] {
@@ -691,6 +708,13 @@ body {
     padding: 1rem; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 4rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important;
+        margin-bottom: 4rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 4rem) / 2); }
   .row .col-1-of-3 {
@@ -713,12 +737,11 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
-    display: flex;
-    justify-content: space-between;
-    padding: 4rem 8rem; }
+    position: absolute;
+    padding: 4rem; }
   .header__logo {
-    width: 5%;
-    height: 5%;
+    width: 30%;
+    height: 30%;
     cursor: pointer; }
   .header__text-box {
     position: absolute;

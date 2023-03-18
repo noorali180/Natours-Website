@@ -36,6 +36,20 @@ body: color #777
     10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
 */
+/*
+0 - 600px       = mobile phone
+600px - 900px   = Tablet portrait
+900px - 1200px  = Tablet landscape
+[1200px - 1800px] = normal styles
+1800px +        = big screens
+
+
+$target parameters.
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -80,6 +94,18 @@ html {
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
   overflow-x: hidden; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   padding: 3rem; }

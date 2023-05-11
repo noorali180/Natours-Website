@@ -10,7 +10,7 @@
 
   &:not(:last-child) {
     margin-bottom: $grid-gutter-vertical;
-    
+    padding: 0 3rem;
   }
 
   [class^="col-"] {

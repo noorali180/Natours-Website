@@ -187,6 +187,9 @@ body {
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 4rem !important; } }
 
 .u-margin-top-medium {
   margin-top: 4rem !important; }
@@ -396,6 +399,40 @@ body {
       font-weight: 100;
       margin-bottom: 10rem;
       color: #fff; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+      border-radius: 3px;
+      background-color: #fff; }
+      .card__side {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0deg);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0deg); }
+      .card:hover .card__side--back {
+        transform: rotateY(0deg); }
+      .card__details {
+        padding: 1rem 3rem; }
+      .card__cta {
+        text-align: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; }
+        .card__cta-only {
+          font-size: 1.4rem;
+          margin-bottom: 1.2rem; }
+        .card__cta-price {
+          font-size: 4.5rem;
+          margin-bottom: 5rem; } }
 
 .title-span {
   margin-top: -10px; }
@@ -403,28 +440,57 @@ body {
 .composition {
   position: relative;
   height: 20vh; }
+  @media (max-width: 56.25em) {
+    .composition {
+      height: 10vh;
+      margin-top: 2rem; } }
   .composition__photo {
     width: 55%;
     position: absolute;
     cursor: pointer;
     box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.4);
     transition: all 0.2s; }
+    @media (max-width: 56.25em) {
+      .composition__photo {
+        float: left;
+        width: 33.3333333333%;
+        position: relative; } }
     .composition__photo--1 {
       left: 0;
       top: -10%; }
+      @media (max-width: 56.25em) {
+        .composition__photo--1 {
+          top: 0;
+          transform: scale(1.2); } }
     .composition__photo--2 {
       right: 0%;
       top: 10%; }
+      @media (max-width: 56.25em) {
+        .composition__photo--2 {
+          top: 0;
+          transform: scale(1.4);
+          z-index: 100; } }
     .composition__photo--3 {
       top: 65%;
       left: 18%; }
+      @media (max-width: 56.25em) {
+        .composition__photo--3 {
+          top: 0;
+          left: 0;
+          transform: scale(1.2); } }
     .composition__photo:hover {
       transform: translateY(-10px) scale(1.1);
       box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
       outline: 5px solid #55c57a;
       z-index: 10; }
+      @media (max-width: 56.25em) {
+        .composition__photo:hover {
+          transform: scale(1.4); } }
   .composition:hover .composition__photo:not(:hover) {
     scale: 0.95; }
+    @media (max-width: 56.25em) {
+      .composition:hover .composition__photo:not(:hover) {
+        z-index: 1; } }
 
 .features-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -435,6 +501,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .features-box {
+      width: 75% !important;
+      margin: 0 auto;
+      padding: 3.2rem 6rem; } }
   .features-box__icon {
     font-size: 5.5rem;
     margin-bottom: 2.5rem;
@@ -714,10 +785,10 @@ body {
     display: table; }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem; } }
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row:not(:last-child) {
-    margin-bottom: 8rem;
-    padding: 0 3rem; }
+    margin-bottom: 8rem; }
   .row [class^="col-"] {
     float: left;
     padding: 1rem; }
@@ -750,9 +821,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+  --webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   @media (max-width: 37.5em) {
     .header {
+      --webkit-clip-path: polygon(0 0, 100% 0, 100% 86vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 86vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
@@ -903,6 +976,9 @@ body {
   padding: 25rem 0rem;
   background-color: #f7f7f7;
   margin-top: -20vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 20rem 0rem; } }
 
 .section-features {
   padding: 15rem 0rem;
@@ -914,20 +990,32 @@ body {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
+  @media (max-width: 56.25em) {
+    .section-features {
+      padding: 10rem 0rem; } }
 
 .section-tours {
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
   background-color: #f7f7f7; }
+  @media (max-width: 56.25em) {
+    .section-tours {
+      padding: 20rem 0 10rem 0; } }
 
 .section-story {
   padding: 15rem 0;
   background-color: transparent;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .section-story {
+      padding: 10rem 0rem; } }
 
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  @media (max-width: 56.25em) {
+    .section-book {
+      padding: 10rem 0rem; } }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 50%, transparent 50%), url(../assets/nat-10.jpg);

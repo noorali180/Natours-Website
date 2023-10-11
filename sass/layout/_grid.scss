@@ -6,11 +6,11 @@
 
   @include respond(tab-port){
     max-width: $grid-width-responsive;
+    padding: 0 3rem;
   }
 
   &:not(:last-child) {
     margin-bottom: $grid-gutter-vertical;
-    padding: 0 3rem;
   }
 
   [class^="col-"] {

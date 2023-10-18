@@ -8,6 +8,16 @@
   padding-left: 8rem;
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 6rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   &__profile {
     width: 15rem;
     height: 15rem;
@@ -22,6 +32,10 @@
     clip-path: cirle(50% at 50% 50%);
 
     transform: translateX(-2rem) skewX(12deg);
+
+    @include respond(phone) {
+      transform: translateX(-2rem) skewX(0);
+    }
 
     &-image {
       height: 100%;
@@ -59,6 +73,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__description {
